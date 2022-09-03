@@ -1,3 +1,7 @@
 import { app } from './app';
+import { initializeDatabase } from './database';
 
-app.listen(3333, () => { console.log('Server is running') });
+(async () => {
+  await initializeDatabase({});
+  app.listen(3333, () =>  console.log('🚀 Server is running') );
+})()
